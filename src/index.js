@@ -47,15 +47,10 @@ class DimondGrid extends React.Component{
 
   }
 
-  click(){
-    let a = 2
-    let b = 3
-  }
-
   render(){
     return(
-        <dir class="dimondGrid" onClick={() => this.click}>
-        <table onClick={() => this.click}>{
+        <dir class="dimondGrid">
+        <table >{
           this.state.cMap.map(row => { 
             return(
               <tr class="gridRow">{
@@ -73,7 +68,6 @@ class DimondGrid extends React.Component{
   }
 }
 
-
 class App extends React.Component{
 
   render(){
@@ -82,12 +76,6 @@ class App extends React.Component{
     )
   }
 }
-
-
-
-
-
-
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
