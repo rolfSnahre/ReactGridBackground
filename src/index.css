@@ -1,0 +1,33 @@
+
+body{
+  scroll-behavior: initial;
+}
+
+.dimondGrid{
+  
+  position: relative;
+  left: -70em;
+  top: -70em;
+  transform: rotate(45deg);
+  display: inline-block;
+
+
+}
+
+table, tr, th, td{
+  border: 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.square{
+  margin-right: -1px;
+  margin-top: -1px;
+  padding:  0;
+  height: 50px;
+  width: 50px;
+
+}
+
+
