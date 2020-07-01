@@ -1,6 +1,8 @@
 
 body{
   scroll-behavior: initial;
+  background-color: rgb(38, 1, 82);
+  overflow: hidden
 }
 
 .dimondGrid{
@@ -25,9 +27,8 @@ table, tr, th, td{
   margin-right: -1px;
   margin-top: -1px;
   padding:  0;
-  height: 50px;
-  width: 50px;
-
+  height: 2em;
+  width: 2em;
 }
 
 

@@ -5,21 +5,22 @@ import './index.css';
 class Square extends React.Component{
   constructor(props){
     super(props);
-    this.color = "#227755"
+    
+    this.state = {color: props.color}
 
     this.hover = this.hover.bind(this)
   }
 
   hover(){
-    this.color = "#FF9933"
+    this.setState( {color:"#FF9933"})
   }
 
-
-
   render(){
-    var divStyle = {background: this.props.color}
     return( 
-      <dir class="square" style={{background: this.props.color}} onclick={this.hover} />
+      <dir class="square" 
+      style={{background: this.state.color}} 
+      onMouseOver={this.hover} 
+      onMouseOut={()=> this.setState( {color:this.props.color})} />
     )
   }
 }
@@ -53,8 +54,8 @@ class DimondGrid extends React.Component{
 
   render(){
     return(
-        <dir class="dimondGrid" onclick={() => this.click}>
-        <table onclick={() => this.click}>{
+        <dir class="dimondGrid" onClick={() => this.click}>
+        <table onClick={() => this.click}>{
           this.state.cMap.map(row => { 
             return(
               <tr class="gridRow">{
@@ -70,14 +71,6 @@ class DimondGrid extends React.Component{
         </dir>
     )
   }
-}
-
-function hgjfdk(){
-  return this.state.cMap.map(row => 
-    <dir class="gridRow">
-      
-    </dir>
-  );
 }
 
 
